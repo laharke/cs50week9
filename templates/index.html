@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Name</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for i in range(length) %}
+    <tr>
+        <td class="text-center">{{ allSymbols[i] }} </td>
+        <td class="text-center">{{ allNames[i] }} </td>
+        <td class="text-center">{{ allShares[i] }} </td>
+        <td class="text-center">{{ allPrices[i] }} </td>
+        <td class="text-center">{{ allTotals[i] }} </td>
+    </tr>
+    {% endfor %}
+
+      <tfoot>
+      <tr>
+          <td class="border-0 fw-bold text-end" colspan="4"> Cash </td>
+          <td class="border-0 text-end"> {{ userMoney }} </td>
+      </tr>
+      <tr>
+          <td class="border-0 fw-bold text-end" colspan="4"> TOTAL </td>
+          <td class="border-0 text-end"> {{ realTotal }} </td>
+      </tr>
+      </tfoot>
+  </table>
+  <p> {{ datos }}</p>
+
+{% endblock %}

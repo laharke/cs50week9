@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Operation</th>
+        <th scope="col">Transacted</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in range(length) %}
+    <tr>
+        <td class="text-center">{{ trans[i]['symbol'] }} </td>
+        <td class="text-center">{{ trans[i]['shares'] }} </td>
+        <td class="text-center">{{ trans[i]['price'] }} </td>
+        <td class="text-center">{{ trans[i]['type'] }} </td>
+        <td class="text-center">{{ trans[i]['time'] }} </td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+{% endblock %}

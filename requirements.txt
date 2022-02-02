@@ -3,5 +3,3 @@ Flask
 Flask-Session
 requests
 
-
-export API_KEY=pk_d4aa585ad93f4f358065587549e2916d

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+ <p class='container'>
+     The {{ stockInfo["symbol"] }} stock it's from {{ stockInfo.name }} and it costs {{ stockInfo.price | usd }}.
+ </p>
+<p class='container'>
+    Want to <a href='/buy'> buy</a> a few?
+</p>
+
+<!--- ACA ESTA LA POSTA, ES POR LLAVE EN DICCIONARIO, LO QUE NO SE ES COMO DSP SIGO LOOPEADNO SI SON MAS DE UNO LOS DATOS
+    NO SE NECESITA, ES SOLAMENTE UNO, LO PUEDO HACER COMO ME PINTE IGUAL YA ANDA LO DEJO ACA POR LAS DUDAS
+    {% for key in stockInfo %}
+    <p> {{ key }}</p>
+    <p> {{ stockInfo[key] }}</p>
+    {% endfor %}--->
+{% endblock %}

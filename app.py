@@ -26,9 +26,8 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
-if not os.environ.get("API_KEY"):
-    raise RuntimeError("API_KEY not set")
-
+#if not os.environ.get("API_KEY"):
+#    raise RuntimeError("API_KEY not set")
 
 def isInteger(n):
     """Return True if argument is a whole number, False if argument has a fractional part.
@@ -251,7 +250,7 @@ def quote():
         # busco el SYMBOL y redirecteo a quoted, QUE MUESTRA LA INFO DE LA STOCK QUE NOS DIERON
         if request.form.get('symbol'):
             symbol = request.form.get('symbol')
-
+            print(symbol)
             if lookup(symbol):
                 print(symbol)
                 stockInfo = lookup(symbol)
